@@ -190,7 +190,7 @@
         const errorResponse = {
           jsonrpc: "2.0",
           id: payload && typeof payload === "object" ? payload.id : 1,
-          error: { code: -32603, message: "Phương thức không được hỗ trợ" },
+          error: { code: -32603, message: "Method not supported" },
         };
 
         if (callback) {
