@@ -1,4 +1,16 @@
 (function () {
+  const isInIframe = window !== window.parent;
+  if (!isInIframe) {
+    return;
+  }
+
+  const settings = window.metamaskOverrideSettings;
+
+  let originalEthereum = window.ethereum;
+
+  if (!originalEthereum) {
+    return;
+  }
   let customAddress = settings.customAddress;
   let customChainId = settings.chainId;
 
@@ -281,7 +293,6 @@
   }
 
   window.addEventListener("message", function (event) {
-
     if (event.data && event.data.type === "metamask_override_check") {
       window.parent.postMessage(
         {
