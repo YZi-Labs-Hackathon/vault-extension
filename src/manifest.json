@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Vault Extension",
+  "version": "1.0",
+  "description": "Vault Extension",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage"
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    },
+    "default_title": "Vault Extension"
+  },
+  "icons": {
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  }
+} 
